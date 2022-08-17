@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+
     /**
-     * Démarre la scene suivante dans unity
+     * Dï¿½marre la scene suivante dans unity
      */
     public void PlayGame()
     {
@@ -23,6 +25,7 @@ public class MainMenu : MonoBehaviour
 
         Debug.Log("Quit");
         Application.Quit();
+		
 
     }
 
