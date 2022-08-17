@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ToggleScript
+public abstract class ToggleScript: MonoBehaviour
 {
-    public void ChangeState();
+    public abstract void ChangeState();
   
 }

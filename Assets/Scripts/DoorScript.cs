@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorScript : MonoBehaviour, ToggleScript
+public class DoorScript : ToggleScript
 {
 
     public bool Open = false;
@@ -28,7 +28,7 @@ public class DoorScript : MonoBehaviour, ToggleScript
         }
     }
 
-   public void ChangeState()
+   public override void ChangeState()
     {
         Open = !Open;
     }

@@ -6,6 +6,8 @@ using UnityEngine;
 public class Switch_controler : MonoBehaviour
 {
     bool switchState = false;
+    public ToggleScript[] toggleScripts = new ToggleScript[0];
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,8 @@ public class Switch_controler : MonoBehaviour
     {
         switchState = !switchState;
         Debug.Log(switchState);
+        for (int i = toggleScripts.Length - 1; i >= 0; i--)
+            toggleScripts[i].ChangeState();
     }
 
 
