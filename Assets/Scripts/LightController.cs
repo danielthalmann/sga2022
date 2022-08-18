@@ -10,10 +10,11 @@ public class LightController : ToggleScript
 
     public Light2D light = null;
 
-    public bool takeDamage;
     public bool lightOn;
 
-
+    private bool takeDamage = false;
+    private bool damageZone = false;
+    private bool releaseDamage = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +27,19 @@ public class LightController : ToggleScript
     {
         if (light)
             light.enabled = lightOn;
-        if (!lightOn)
+        if (!lightOn && damageZone)
         {
             dam.ApplyDamage();
-        } else
-        {
-            dam.RestoreDamage();
+            releaseDamage = false;
         }
+        else
+        {
+            if (!releaseDamage)
+            {
+                dam.RestoreDamage();
+                releaseDamage = true;
+            }
+        }   
     }
 
     public override void ChangeState()
@@ -43,10 +50,12 @@ public class LightController : ToggleScript
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-
+        damageZone = true;
     }
+
     private void OnTriggerExit2D(Collider2D collider)
     {
-
+        damageZone = false;
     }
+
 }
