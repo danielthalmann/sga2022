@@ -15,6 +15,6 @@ public class Camera_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(characterToFollow.position.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(characterToFollow.position.x, characterToFollow.position.y, transform.position.z);
     }
 }

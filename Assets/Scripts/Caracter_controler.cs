@@ -59,7 +59,7 @@ public class Caracter_controler : MonoBehaviour
         switch (collider.tag)
         {
             case "ladder":
-                rigidbody2d.gravityScale = 1;
+                rigidbody2d.gravityScale = 20;
                 hasToClimb = false;
                 break;
             case "Switch":
