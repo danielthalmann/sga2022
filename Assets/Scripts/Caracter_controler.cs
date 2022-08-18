@@ -5,61 +5,87 @@ using UnityEngine;
 public class Caracter_controler : MonoBehaviour
 {
 	float	moveSpeed = 0;
-	Rigidbody2D rigidbody2d;
+    float absmoveSpeed = 0;
+    Rigidbody2D rigidbody2d;
 	[SerializeField]
-	float moveMultiplication = 500;
+	float moveMultiplication = 5;
 	[SerializeField]
 	bool hasToClimb = false;
 	private float	climbSpeed = 0;
 	private Switch_controler switch_Controler;
     bool switchPress = false;
+    private SpriteRenderer _renderer;
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-		rigidbody2d.gravityScale = 1;
+		rigidbody2d.gravityScale = 50;
+        _renderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveSpeed = Input.GetAxis("Horizontal") * moveMultiplication * Time.deltaTime;
-		if (hasToClimb)
-		{
-			climbSpeed = Input.GetAxis("Vertical") * moveMultiplication * Time.deltaTime;
-		}
-		else
-			climbSpeed = 0;
-		rigidbody2d.velocity = new Vector2(moveSpeed, climbSpeed);
-		if (Input.GetButtonDown("Jump") && switch_Controler != null && !switchPress)
+        moveSpeed = Input.GetAxis("Horizontal") * moveMultiplication;
+
+        if (hasToClimb)
+        {
+            climbSpeed = Input.GetAxis("Vertical") * moveMultiplication;
+        }
+        else
+        {
+            climbSpeed = 0;
+        }
+
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            absmoveSpeed = moveSpeed;
+            _renderer.flipX = false;
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            absmoveSpeed = moveSpeed;
+            _renderer.flipX = true;
+        }
+
+        if (Input.GetButtonDown("Jump") && switch_Controler != null && !switchPress)
         {
 			switch_Controler.Switch();
             switchPress = true;
         }
-        if (Input.GetButtonUp("Jump"))
+        if (switchPress && !Input.GetButtonUp("Jump"))
         {
             switchPress = false;
         }
     }
 
-	private void OnTriggerEnter2D(Collider2D collider)
+    private void FixedUpdate()
+    {
+        rigidbody2d.velocity = new Vector2(moveSpeed, climbSpeed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
 	{
         switch (collider.tag){
-		case "ladder":
-        rigidbody2d.gravityScale = 0;
-        hasToClimb = true;
-				break;
-        case "Switch":
-				switch_Controler = collider.gameObject.GetComponent<Switch_controler>();
+		    case "ladder":
+                rigidbody2d.gravityScale = 0;
+                hasToClimb = true;
+		    	break;
+            case "Switch":
+		    	switch_Controler = collider.gameObject.GetComponent<Switch_controler>();
                 break;
         }
-}
+    }
+
 	private void OnTriggerExit2D(Collider2D collider)
 	{
         switch (collider.tag)
         {
             case "ladder":
-                rigidbody2d.gravityScale = 20;
+                rigidbody2d.gravityScale = 50;
                 hasToClimb = false;
                 break;
             case "Switch":
