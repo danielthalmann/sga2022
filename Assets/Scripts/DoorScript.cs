@@ -7,13 +7,13 @@ public class DoorScript : ToggleScript
 
     public bool Open = false;
 
-    private Animator anim;    
+    public Animator anim;    
 	private Collider2D col;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+
         col = GetComponent<Collider2D>();
        
     }
