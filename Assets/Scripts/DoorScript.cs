@@ -8,13 +8,13 @@ public class DoorScript : ToggleScript
     public bool Open = false;
 
     private Animator anim;    
-	private Collider collider;
+	private Collider2D col;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        collider = GetComponent<Collider>();
+        col = GetComponent<Collider2D>();
        
     }
 
@@ -23,11 +23,11 @@ public class DoorScript : ToggleScript
     {
         if (Open) {
             anim.SetBool("Open", true);
-            collider.enabled = false;
+            col.enabled = false;
 		}
         else
         {
-            collider.enabled = true;
+            col.enabled = true;
             if (anim.GetBool("Open"))
                 anim.SetBool("Open", false);
         }
