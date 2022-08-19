@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class LightController : ToggleScript
 {
 
-    public DamageScript dam;
+    public DamageScript dam  = null;
 
     public Light2D light = null;
 
@@ -27,19 +27,25 @@ public class LightController : ToggleScript
     {
         if (light)
             light.enabled = lightOn;
-        if (!lightOn && damageZone)
+        // on effectue le traitement des domages seulement si on a un élément 
+        // de configuré
+        if (dam)
         {
-            dam.ApplyDamage();
-            releaseDamage = false;
-        }
-        else
-        {
-            if (!releaseDamage)
+            if (!lightOn && damageZone)
             {
-                dam.RestoreDamage();
-                releaseDamage = true;
+                dam.ApplyDamage();
+                releaseDamage = false;
             }
-        }   
+            else
+            {
+                if (!releaseDamage)
+                {
+                    dam.RestoreDamage();
+                    releaseDamage = true;
+                }
+            }
+        }
+  
     }
 
     public override void ChangeState()

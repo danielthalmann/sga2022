@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorScript : ToggleScript
 {
 
-    public bool Open = false;
+    public bool Open;
 
     public Animator anim;    
 	private Collider2D col;
