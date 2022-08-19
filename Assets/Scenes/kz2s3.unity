@@ -4160,6 +4160,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3319593518889228556, guid: 84caf511240343045b2256745a70e36a, type: 3}
+      propertyPath: sceneName
+      value: HUB
+      objectReference: {fileID: 0}
     - target: {fileID: 6663819498383857242, guid: 84caf511240343045b2256745a70e36a, type: 3}
       propertyPath: m_Name
       value: NextScene (1)
