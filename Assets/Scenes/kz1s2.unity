@@ -3879,6 +3879,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 828407107366934354, guid: 2b0a796cba1b0408ea2667cb9e42ebc8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3029472193744166999, guid: 2b0a796cba1b0408ea2667cb9e42ebc8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268613767335187089, guid: 2b0a796cba1b0408ea2667cb9e42ebc8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6599564914626934536, guid: 2b0a796cba1b0408ea2667cb9e42ebc8, type: 3}
       propertyPath: m_Name
       value: Ladder
@@ -3927,5 +3939,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 828407107366934354, guid: 2b0a796cba1b0408ea2667cb9e42ebc8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b0a796cba1b0408ea2667cb9e42ebc8, type: 3}
