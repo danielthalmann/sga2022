@@ -8,7 +8,7 @@ public class Caracter_controler : MonoBehaviour
     float absmoveSpeed = 0;
     Rigidbody2D rigidbody2d;
 	[SerializeField]
-	float moveMultiplication = 8;
+	float moveMultiplication = 10;
 	[SerializeField]
 	bool hasToClimb = false;
 	private float	climbSpeed = 0;
@@ -34,6 +34,7 @@ public class Caracter_controler : MonoBehaviour
         if (hasToClimb)
         {
             climbSpeed = Input.GetAxis("Vertical") * moveMultiplication;
+            animator.SetInteger("climb", climbSpeed == 0? 0:1);
         }
         else
         {
@@ -78,6 +79,7 @@ public class Caracter_controler : MonoBehaviour
 		    case "ladder":
                 rigidbody2d.gravityScale = 0;
                 hasToClimb = true;
+                animator.SetBool("ladder", hasToClimb);
 		    	break;
             case "Switch":
 		    	switch_Controler = collider.gameObject.GetComponent<Switch_controler>();
@@ -92,6 +94,7 @@ public class Caracter_controler : MonoBehaviour
             case "ladder":
                 rigidbody2d.gravityScale = 50;
                 hasToClimb = false;
+                animator.SetBool("ladder", hasToClimb);
                 break;
             case "Switch":
                 switch_Controler = null;
