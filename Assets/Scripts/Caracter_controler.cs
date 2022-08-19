@@ -45,13 +45,13 @@ public class Caracter_controler : MonoBehaviour
         {
             animator.SetInteger("walk", 1); 
             absmoveSpeed = moveSpeed;
-            //_renderer.flipX = false;
+            _renderer.flipX = false;
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
             animator.SetInteger("walk", 1);
             absmoveSpeed = moveSpeed;
-            //_renderer.flipX = true;
+            _renderer.flipX = true;
         }
         else
             animator.SetInteger("walk", 0);
