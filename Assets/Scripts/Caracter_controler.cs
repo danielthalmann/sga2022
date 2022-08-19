@@ -21,7 +21,7 @@ public class Caracter_controler : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-		rigidbody2d.gravityScale = 50;
+		rigidbody2d.gravityScale = 30;
         _renderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
@@ -92,7 +92,7 @@ public class Caracter_controler : MonoBehaviour
         switch (collider.tag)
         {
             case "ladder":
-                rigidbody2d.gravityScale = 50;
+                rigidbody2d.gravityScale = 30;
                 hasToClimb = false;
                 animator.SetBool("ladder", hasToClimb);
                 break;
