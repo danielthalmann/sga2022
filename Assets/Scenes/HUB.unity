@@ -202,7 +202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 559dcd05f1b274b3686cd84b60c53957, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllLeversOk: 0
-  anim: {fileID: 0}
+  anim: {fileID: 23709197}
 --- !u!1 &76455715
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,11 +724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537375748305079074, guid: 84caf511240343045b2256745a70e36a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.898716
+      value: 32.05
       objectReference: {fileID: 0}
     - target: {fileID: 7537375748305079074, guid: 84caf511240343045b2256745a70e36a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6235783
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 7537375748305079074, guid: 84caf511240343045b2256745a70e36a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -778,6 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611843217}
   - component: {fileID: 611843216}
+  - component: {fileID: 611843218}
   m_Layer: 0
   m_Name: Light 2D (5)
   m_TagString: Untagged
@@ -879,6 +880,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611843218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611843215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925dffb6800db463e9019d7d9feeeaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 611843216}
+  lock1OK: 0
 --- !u!1 &624641936
 GameObject:
   m_ObjectHideFlags: 0
