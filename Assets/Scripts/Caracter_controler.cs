@@ -8,7 +8,7 @@ public class Caracter_controler : MonoBehaviour
     float absmoveSpeed = 0;
     Rigidbody2D rigidbody2d;
 	[SerializeField]
-	float moveMultiplication = 5;
+	float moveMultiplication = 8;
 	[SerializeField]
 	bool hasToClimb = false;
 	private float	climbSpeed = 0;
@@ -42,14 +42,18 @@ public class Caracter_controler : MonoBehaviour
 
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
+            animator.SetInteger("walk", 1); 
             absmoveSpeed = moveSpeed;
             _renderer.flipX = false;
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
+            animator.SetInteger("walk", 1);
             absmoveSpeed = moveSpeed;
             _renderer.flipX = true;
         }
+        else
+            animator.SetInteger("walk", 0);
 
         if (Input.GetButtonDown("Jump") && switch_Controler != null && !switchPress)
         {
@@ -60,6 +64,7 @@ public class Caracter_controler : MonoBehaviour
         {
             switchPress = false;
         }
+        
     }
 
     private void FixedUpdate()
