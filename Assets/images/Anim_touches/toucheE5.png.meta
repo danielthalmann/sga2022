@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 83bbb8dd91fb942de9bd1815b555d115
+=======
+guid: cd0e142300ae32e4b82692300d956558
+>>>>>>> kz1s2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

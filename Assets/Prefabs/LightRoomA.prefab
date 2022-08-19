@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dam: {fileID: 0}
   light: {fileID: 6086190351012693166}
-  lightOn: 0
+  lightOn: 1
 --- !u!1 &6086190351012693164
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,8 +173,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 168.48816
-  m_PointLightOuterAngle: 202.59
+  m_PointLightInnerAngle: 108.81107
+  m_PointLightOuterAngle: 202.58998
   m_PointLightInnerRadius: 0.3
   m_PointLightOuterRadius: 10.760876
   m_ShapeLightParametricSides: 5
