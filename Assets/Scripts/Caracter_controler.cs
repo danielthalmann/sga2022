@@ -33,7 +33,7 @@ public class Caracter_controler : MonoBehaviour
 
         if (hasToClimb)
         {
-            climbSpeed = Input.GetAxis("Vertical") * moveMultiplication;
+            climbSpeed = Input.GetAxis("Vertical") * (moveMultiplication/2);
             animator.SetInteger("climb", climbSpeed == 0? 0:1);
         }
         else
