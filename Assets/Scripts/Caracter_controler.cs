@@ -43,12 +43,12 @@ public class Caracter_controler : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
             absmoveSpeed = moveSpeed;
-            _renderer.flipX = false;
+            //_renderer.flipX = false;
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
             absmoveSpeed = moveSpeed;
-            _renderer.flipX = true;
+            //_renderer.flipX = true;
         }
 
         if (Input.GetButtonDown("Jump") && switch_Controler != null && !switchPress)
