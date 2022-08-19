@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walk
+  m_Name: idlebag
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 71dc0137b46e2e8489de4b6b6c0d0230, type: 3}
+      value: {fileID: 21300000, guid: 82b825b8de6d04c8ba9b35df948cdc14, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: e6687ffa38bce9c4992140c081d6f438, type: 3}
+      value: {fileID: 21300000, guid: 5798bbc0e4fdad2498d79eca3cf0ded1, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: ee9a6c2f9bdeba84dbaefa98b25990ca, type: 3}
+      value: {fileID: 21300000, guid: 4fce36413d12747e2a3d458d78b944be, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: d8bfce2cfe35fcb419fd25f99ce44c14, type: 3}
+      value: {fileID: 21300000, guid: 1c76a0af6fb784b0eaf2c2adf3ee0440, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 71dc0137b46e2e8489de4b6b6c0d0230, type: 3}
-    - {fileID: 21300000, guid: e6687ffa38bce9c4992140c081d6f438, type: 3}
-    - {fileID: 21300000, guid: ee9a6c2f9bdeba84dbaefa98b25990ca, type: 3}
-    - {fileID: 21300000, guid: d8bfce2cfe35fcb419fd25f99ce44c14, type: 3}
+    - {fileID: 21300000, guid: 82b825b8de6d04c8ba9b35df948cdc14, type: 3}
+    - {fileID: 21300000, guid: 5798bbc0e4fdad2498d79eca3cf0ded1, type: 3}
+    - {fileID: 21300000, guid: 4fce36413d12747e2a3d458d78b944be, type: 3}
+    - {fileID: 21300000, guid: 1c76a0af6fb784b0eaf2c2adf3ee0440, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
