@@ -17,6 +17,13 @@ public class Caracter_controler : MonoBehaviour
     private SpriteRenderer _renderer;
     Animator animator;
 
+    public AudioClip[] soundWalkClips = new AudioClip[0];
+    public AudioClip[] soundLadderClips = new AudioClip[0];
+    private AudioSource sound;
+    public float AudioWalkSpeed = .5f;
+    public float AudioLadderSpeed = .5f;
+    private float LastTimeAudio = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +31,7 @@ public class Caracter_controler : MonoBehaviour
 		rigidbody2d.gravityScale = 30;
         _renderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,11 +39,14 @@ public class Caracter_controler : MonoBehaviour
     {
         moveSpeed = Input.GetAxis("Horizontal") * moveMultiplication;
 
+        LastTimeAudio += Time.deltaTime;
+
         if (hasToClimb)
         {
             climbSpeed = Input.GetAxis("Vertical") * (moveMultiplication/2);
             animator.SetInteger("climb", climbSpeed == 0? 0:1);
-        }
+            if (climbSpeed != 0.0f)
+                PlayLadderSound();        }
         else
         {
             climbSpeed = 0;
@@ -43,12 +54,14 @@ public class Caracter_controler : MonoBehaviour
 
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
+            PlayWalkSound();
             animator.SetInteger("walk", 1); 
             absmoveSpeed = moveSpeed;
             _renderer.flipX = false;
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
+            PlayWalkSound();
             animator.SetInteger("walk", 1);
             absmoveSpeed = moveSpeed;
             _renderer.flipX = true;
@@ -58,7 +71,9 @@ public class Caracter_controler : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && switch_Controler != null && !switchPress)
         {
-			switch_Controler.Switch();
+
+
+            switch_Controler.Switch();
             switchPress = true;
         }
         if (switchPress && !Input.GetButtonUp("Jump"))
@@ -66,6 +81,36 @@ public class Caracter_controler : MonoBehaviour
             switchPress = false;
         }
         
+    }
+
+    public void PlayWalkSound()
+    {
+        if (sound)
+        {
+            if (LastTimeAudio > AudioWalkSpeed)
+            {
+                int idx = Random.Range(0, soundWalkClips.Length - 1);
+                sound.Stop();
+                sound.clip = soundWalkClips[idx];
+                sound.Play();
+                LastTimeAudio = 0;
+            }
+        }
+    }
+
+    public void PlayLadderSound()
+    {
+        if (sound)
+        {
+            if (LastTimeAudio > AudioLadderSpeed)
+            {
+                int idx = Random.Range(0, soundLadderClips.Length - 1);
+                sound.Stop();
+                sound.clip = soundLadderClips[idx];
+                sound.Play();
+                LastTimeAudio = 0;
+            }
+        }
     }
 
     private void FixedUpdate()
