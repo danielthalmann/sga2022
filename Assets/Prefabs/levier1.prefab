@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleScripts:
   - {fileID: 8761587878899132881}
+  - {fileID: 0}
   backToDefault: 0
   timeBack: 0
 --- !u!1 &8761587878899132718
