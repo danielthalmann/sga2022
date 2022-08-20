@@ -6,7 +6,10 @@ public class GameManager : MonoBehaviour
 {
     public bool passedLevel1 = false;
     public bool passedLevel2 = false;
-    
+    public AudioClip AmbiantSound;
+    public AudioClip FinalSound;
+    public AudioSource audio;
+   
     // AudioSource
     private static GameManager gameManager;
 
@@ -21,6 +24,18 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+    }
+
+    public static void Starting()
+    {
+        gameManager.audio.clip = gameManager.AmbiantSound;
+        gameManager.audio.Play();
+    }
+
+    public static void Final()
+    {
+        gameManager.audio.clip = gameManager.FinalSound;
+        gameManager.audio.Play();
     }
 
     public static void SetPassedLevel1(bool value)

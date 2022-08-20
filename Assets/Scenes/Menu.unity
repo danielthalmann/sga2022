@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 107003962}
   - component: {fileID: 107003961}
   - component: {fileID: 107003960}
+  - component: {fileID: 107003963}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -251,6 +252,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passedLevel1: 0
   passedLevel2: 0
+  AmbiantSound: {fileID: 8300000, guid: 9b8058f2979e1ac47b24d164f95274c6, type: 3}
+  FinalSound: {fileID: 8300000, guid: 9bc038dcf1be8984db4d01b313bc7b9f, type: 3}
+  audio: {fileID: 107003960}
 --- !u!4 &107003962
 Transform:
   m_ObjectHideFlags: 0
@@ -266,6 +270,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107003963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107003959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1359094d10ca204884484496c05023e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFinal: 0
 --- !u!1 &154189040
 GameObject:
   m_ObjectHideFlags: 0
