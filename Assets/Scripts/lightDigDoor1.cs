@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class lightDigDoor1 : MonoBehaviour
 {
-    public UnityEngine.Rendering.Universal.Light2D light;
+    public Light2D lightObject = null;
     [SerializeField]
     public bool ForLevel1 = false;
     [SerializeField]
@@ -13,15 +14,15 @@ public class lightDigDoor1 : MonoBehaviour
 
     void Start()
     {
-        light.color = Color.red;
+        lightObject.color = Color.red;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (ForLevel1 && GameManager.IsPassedLevel1())
-            light.color = Color.green;
+            lightObject.color = Color.green;
         if (ForLevel2 && GameManager.IsPassedLevel2())
-            light.color = Color.green;
+            lightObject.color = Color.green;
     }
 }

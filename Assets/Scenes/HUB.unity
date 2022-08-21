@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925dffb6800db463e9019d7d9feeeaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 76455716}
+  lightObject: {fileID: 76455716}
   ForLevel1: 1
   ForLevel2: 0
 --- !u!1001 &120526830
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925dffb6800db463e9019d7d9feeeaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 437202585}
+  lightObject: {fileID: 437202585}
   ForLevel1: 0
   ForLevel2: 1
 --- !u!1001 &494187305
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925dffb6800db463e9019d7d9feeeaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 611843216}
+  lightObject: {fileID: 611843216}
   ForLevel1: 1
   ForLevel2: 0
 --- !u!1 &624641936
@@ -1791,7 +1791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925dffb6800db463e9019d7d9feeeaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 688183889}
+  lightObject: {fileID: 688183889}
   ForLevel1: 0
   ForLevel2: 1
 --- !u!1 &735676350
@@ -2327,7 +2327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925dffb6800db463e9019d7d9feeeaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 1114345093}
+  lightObject: {fileID: 1114345093}
   ForLevel1: 0
   ForLevel2: 1
 --- !u!1 &1421245089
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   passedLevel2: 0
   AmbiantSound: {fileID: 0}
   FinalSound: {fileID: 0}
-  audio: {fileID: 0}
+  audioObject: {fileID: 0}
 --- !u!4 &1453684079
 Transform:
   m_ObjectHideFlags: 0
@@ -6531,6 +6531,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 925dffb6800db463e9019d7d9feeeaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 2117603282}
+  lightObject: {fileID: 2117603282}
   ForLevel1: 1
   ForLevel2: 0
