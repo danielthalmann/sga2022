@@ -7,6 +7,7 @@ TagManager:
   - ladder
   - Switch
   - pass
+  - climbOnOff
   layers:
   - Default
   - TransparentFX
