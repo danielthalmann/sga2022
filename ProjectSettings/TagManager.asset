@@ -8,6 +8,7 @@ TagManager:
   - Switch
   - pass
   - climbOnOff
+  - Champiz
   layers:
   - Default
   - TransparentFX
