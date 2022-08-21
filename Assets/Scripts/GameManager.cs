@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public bool passedLevel2 = false;
     public AudioClip AmbiantSound;
     public AudioClip FinalSound;
-    public AudioSource audio;
+    public AudioSource audioObject;
    
     // AudioSource
     private static GameManager gameManager;
@@ -28,14 +28,14 @@ public class GameManager : MonoBehaviour
 
     public static void Starting()
     {
-        gameManager.audio.clip = gameManager.AmbiantSound;
-        gameManager.audio.Play();
+        gameManager.audioObject.clip = gameManager.AmbiantSound;
+        gameManager.audioObject.Play();
     }
 
     public static void Final()
     {
-        gameManager.audio.clip = gameManager.FinalSound;
-        gameManager.audio.Play();
+        gameManager.audioObject.clip = gameManager.FinalSound;
+        gameManager.audioObject.Play();
         gameManager.passedLevel1 = false;
         gameManager.passedLevel2 = false;
     }
