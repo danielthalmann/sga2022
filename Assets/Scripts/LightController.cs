@@ -8,7 +8,7 @@ public class LightController : ToggleScript
 
     public DamageScript dam  = null;
 
-    public Light2D light = null;
+    public Light2D lightObject = null;
 
     public bool lightOn;
 
@@ -25,8 +25,8 @@ public class LightController : ToggleScript
     // Update is called once per frame
     void Update()
     {
-        if (light)
-            light.enabled = lightOn;
+        if (lightObject)
+            lightObject.enabled = lightOn;
         // on effectue le traitement des domages seulement si on a un élément 
         // de configuré
         if (dam)

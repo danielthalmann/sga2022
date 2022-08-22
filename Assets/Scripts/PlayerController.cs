@@ -58,4 +58,21 @@ public class PlayerController : DamageScript
     {
         restoreDamage = true;
     }
+
+    /*
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Champiz")
+        {
+            live = live / 2;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Champiz")
+        {
+            live = maxLive;
+        }
+    }
+    */
 }

@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dam: {fileID: 0}
-  light: {fileID: 6086190351012693166}
-  lightOn: 1
+  lightObject: {fileID: 6086190351012693166}
+  lightOn: 0
 --- !u!1 &6086190351012693164
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dam: {fileID: 0}
-  light: {fileID: 6086190351012693166}
+  lightObject: {fileID: 6086190351012693166}
   lightOn: 1
 --- !u!1 &6086190351012693164
 GameObject:
@@ -741,7 +741,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a5035ee92dc1c4403af9d5e52a68d1fd, type: 3}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
