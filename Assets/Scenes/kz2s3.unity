@@ -1758,6 +1758,10 @@ PrefabInstance:
       propertyPath: dam
       value: 
       objectReference: {fileID: 1936736173}
+    - target: {fileID: 6086190349654111648, guid: f31d0d0f8f975664fb158776e3798d71, type: 3}
+      propertyPath: lightOn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6086190349654111662, guid: f31d0d0f8f975664fb158776e3798d71, type: 3}
       propertyPath: m_RootOrder
       value: 7

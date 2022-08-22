@@ -1739,6 +1739,10 @@ PrefabInstance:
       propertyPath: dam
       value: 
       objectReference: {fileID: 1936736173}
+    - target: {fileID: 6086190349654111648, guid: f31d0d0f8f975664fb158776e3798d71, type: 3}
+      propertyPath: lightOn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6086190349654111662, guid: f31d0d0f8f975664fb158776e3798d71, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -10071,6 +10075,10 @@ PrefabInstance:
     - target: {fileID: 1396178934, guid: e69a8abc068681f4bbde5ac95714f5ba, type: 3}
       propertyPath: m_Offset.y
       value: -0.80638933
+      objectReference: {fileID: 0}
+    - target: {fileID: 306674847140182946, guid: e69a8abc068681f4bbde5ac95714f5ba, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 306674848946825721, guid: e69a8abc068681f4bbde5ac95714f5ba, type: 3}
       propertyPath: m_RootOrder
