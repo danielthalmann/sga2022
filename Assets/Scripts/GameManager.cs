@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     {
         gameManager.audioObject.clip = gameManager.AmbiantSound;
         gameManager.audioObject.Play();
+        gameManager.passedLevel1 = false;
+        gameManager.passedLevel2 = false;
     }
 
     public static void Final()
