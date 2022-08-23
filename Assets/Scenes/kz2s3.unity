@@ -1344,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 1936736173}
     - target: {fileID: 6086190349654111648, guid: 0a0285cf3aee9784aa28c5ea1a2f3481, type: 3}
       propertyPath: lightOn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6086190349654111649, guid: 0a0285cf3aee9784aa28c5ea1a2f3481, type: 3}
       propertyPath: m_Size.x
