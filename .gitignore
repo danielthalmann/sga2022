@@ -62,4 +62,4 @@ crashlytics-build.properties
 .vscode
 
 # Ignore user settings
-UserSettings/
+UserSettings/*
