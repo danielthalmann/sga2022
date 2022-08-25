@@ -30,4 +30,22 @@ public class MainMenu : MonoBehaviour
 
     }
 
+
+    /**
+     * D�marre la scene suivante dans unity
+     */
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+
+    /**
+     * D�marre la scene suivante dans unity
+     */
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
 }
