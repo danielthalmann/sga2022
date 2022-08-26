@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
+    void Start()
+    {
+        Cursor.visible = true;
+    }
 
     /**
      * D�marre la scene suivante dans unity
@@ -45,6 +48,7 @@ public class MainMenu : MonoBehaviour
      */
     public void Menu()
     {
+        Cursor.visible = true;
         SceneManager.LoadScene("Menu");
     }
 

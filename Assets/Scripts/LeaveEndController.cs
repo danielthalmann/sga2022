@@ -32,6 +32,7 @@ public class LeaveEndController : MonoBehaviour
     {
 
         Debug.Log("Quit");
+        Cursor.visible = true;
         Application.Quit();
 		
 

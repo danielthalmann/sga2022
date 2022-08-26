@@ -8,6 +8,10 @@ public class PauseController : MonoBehaviour
     public bool IsPaused;
     public GameObject PauseMenu;
 
+    void Start()
+    {
+        Cursor.visible = true;
+    }
 
     // Update is called once per frame
     void Update()
@@ -15,6 +19,7 @@ public class PauseController : MonoBehaviour
         if (IsPaused)
         {
             PauseMenu.SetActive(true);
+            Cursor.visible = true;
             Time.timeScale = 0f;
         }
         else
