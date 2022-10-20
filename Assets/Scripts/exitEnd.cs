@@ -11,9 +11,8 @@ public class exitEnd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump") || Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Jump");
             SceneManager.LoadScene("Menu");
         }
     }

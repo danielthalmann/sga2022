@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public static void Starting()
     {
+        gameManager.audioObject.Stop();
         gameManager.audioObject.clip = gameManager.AmbiantSound;
         gameManager.audioObject.Play();
         gameManager.passedLevel1 = false;
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour
 
     public static void Final()
     {
+        gameManager.audioObject.Pause();
+        gameManager.audioObject.Stop();
         gameManager.audioObject.clip = gameManager.FinalSound;
         gameManager.audioObject.Play();
         gameManager.passedLevel1 = false;

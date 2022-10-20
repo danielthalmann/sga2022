@@ -36,7 +36,7 @@ public class NextSceneController : MonoBehaviour
     {
         // start transition
         transition.SetTrigger("Start");
-        Debug.Log("Start");
+        Debug.Log(name);
 
         yield return new WaitForSeconds(1);
 
