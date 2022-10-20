@@ -7,6 +7,7 @@ public class PauseController : MonoBehaviour
 {
     public bool IsPaused;
     public GameObject PauseMenu;
+    public NextSceneController nextSceneController;
 
     void Start()
     {
@@ -43,7 +44,9 @@ public class PauseController : MonoBehaviour
     public void Menu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        IsPaused = false;
+        nextSceneController.LoadNextScene("Menu");
+        //SceneManager.LoadScene("Menu");
     }
     
     

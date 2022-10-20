@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public Animator transition;
+
     void Start()
     {
         Cursor.visible = true;
@@ -16,7 +19,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         //SceneManager.LoadScene("Final");
-        SceneManager.LoadScene("tutorial");
+        LoadNextScene("tutorial");
     }
 
 
@@ -29,7 +32,6 @@ public class MainMenu : MonoBehaviour
 
         Debug.Log("Quit");
         Application.Quit();
-		
 
     }
 
@@ -39,7 +41,7 @@ public class MainMenu : MonoBehaviour
      */
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        LoadNextScene("Credits");
     }
 
 
@@ -49,7 +51,23 @@ public class MainMenu : MonoBehaviour
     public void Menu()
     {
         Cursor.visible = true;
-        SceneManager.LoadScene("Menu");
+        LoadNextScene("Menu");
+    }
+
+    protected void LoadNextScene(string name)
+    {
+        StartCoroutine(EnumLoad(name));
+    }
+
+    IEnumerator EnumLoad(string name) 
+    {
+        // start transition
+        transition.SetTrigger("Start");
+        Debug.Log("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(name);
     }
 
 }

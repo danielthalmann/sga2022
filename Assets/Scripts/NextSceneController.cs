@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextSceneController : MonoBehaviour
 {
     public string sceneName;
+    public Animator transition;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,23 @@ public class NextSceneController : MonoBehaviour
     {
         Debug.Log("trig");
         if (sceneName != "")
-            SceneManager.LoadScene(sceneName);
+            LoadNextScene(sceneName);
     }
+
+    public void LoadNextScene(string name)
+    {
+        StartCoroutine(EnumLoad(name));
+    }
+
+    IEnumerator EnumLoad(string name)
+    {
+        // start transition
+        transition.SetTrigger("Start");
+        Debug.Log("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(name);
+    }
+
 }
