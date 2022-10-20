@@ -44,9 +44,17 @@ public class Caracter_controler : MonoBehaviour
         if (hasToClimb)
         {
             climbSpeed = Input.GetAxis("Vertical") * (moveMultiplication/2);
-            animator.SetInteger("climb", climbSpeed == 0? 0:1);
-            if (climbSpeed != 0.0f)
-                PlayLadderSound();        }
+            if (climbSpeed != 0)
+            {
+                animator.SetBool("ladder", hasToClimb);
+
+                if (climbSpeed != 0.0f)
+                    PlayLadderSound();        
+            }
+            animator.SetInteger("climb", climbSpeed == 0 ? 0 : 1);
+
+        }
+
         else
         {
             climbSpeed = 0;
@@ -124,7 +132,6 @@ public class Caracter_controler : MonoBehaviour
 		    case "ladder":
                 rigidbody2d.gravityScale = 0;
                 hasToClimb = true;
-                animator.SetBool("ladder", hasToClimb);
 		    	break;
             case "Switch":
 		    	switch_Controler = collider.gameObject.GetComponent<Switch_controler>();
